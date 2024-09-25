@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindromes!!</title>
+</head>
+<body>
+    <div id="link"></div>
+    <div id="link2"></div>
+    <script>
+// first we concacate the sentance is entering the user to can chack it  
+const list1=[];
+let user =prompt('Enter the sentence you want to check');
+var userfile = (user) => {
+  var userjoined = user.split(' ').join('')
+  return userjoined
+}
+let userinv=(userfile(user));
+// now we are reversing the user choice and after we will see if match
+let reverseString = userinv => userinv.split(" ").map(userinv => userinv.split('').reverse('').join('')).join('')
+let string = userinv => userinv.split(" ").map(userinv => userinv.split("").join('')).join('')
+let output = {
+  ['Normalstring']: string(userinv),
+  ['Inversestring']: reverseString(userinv)
+}
+// this will show the in the html
+document.getElementById("link2").value;
+list1.push({Normalstring:output.Normalstring, Inversestring:output.Inversestring});
+list1.forEach(output => link2.innerHTML += "<br>" + Object.values(output).join("-//-"));
+        
+
+if (string(userinv) === reverseString(userinv)){
+    console.log = function(message) {
+    document.getElementById('link').innerHTML = message;
+};
+    console.log('Yes is Palindrom');
+    
+}
+    
+else if (string(userinv) != reverseString(userinv)){
+     console.log = function(message) {
+    document.getElementById('link').innerHTML = message;
+};
+    console.log('No is not Palindrom');
+    
+    }
+
+    </script>
+  
+</body>
+</html>
+
